@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=https://zoejonesdesign.com">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Sign Up Today!</h1>
+        </div>
+        <!-- Form -->
+        <form id="form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name" name="name" required minlength="3" maxlength="100">
+            </div>
+        <!-- Phone number -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="07647388743" name="phone" required pattern="[0-9]{11}">
+        </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="tel" id="email" placeholder="email@example.com" name="email" required>
+            </div>
+            <!-- Website URL -->
+            <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="https://yourwebsite.com" name="website" required>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create password (min. 8 characters)" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include atleast 1 upper case character, 1 lower case character and 1 number">
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Repeat your password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!-- Error/ success message -->
+        <div class="message-container">
+            <h3 id="message">Don't hestitate!</h3>
+        </div>
+    </div>
+    </body>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
